@@ -37,8 +37,9 @@ import * as fs from "fs";
     // get input
     const inputFilePath = `inputs/day${day}.txt`;
     const input = fs.readFileSync(inputFilePath, "utf-8");
+
     // Remove the last line if it's blank
-    let lines = input.split("\n");
+    let lines = input.trim().split("\n");
     if (lines.length > 0 && lines[lines.length - 1].trim() === "") {
       lines.pop();
     }
